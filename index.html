@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>外卖平台</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/rem.js"></script>
+	<script src="js/zepto.js"></script>
+</head>
+<body>
+	<div id="search" class="section">
+		<div class="sea_header">
+			<div class="goback"><</div>
+			<div class="city-name"><a id="cname" href="javascript:;">上海</a></div> 
+			<div class="tocitylist"><a href="#citylist">切换城市</a></div>
+		</div>
+		<div class="inp_text">
+			<input type="text" id="keyword">
+			<div class="inp_btn">
+				<button id="elm">饿了么搜索</button><button id="baidu">百度搜索</button>
+			</div>
+		</div>
+				
+		
+		<ul id="list">
+			
+		</ul>
+	</div>
+	<div id="citylist" class="section">
+		<div class="city_header">
+			ele.me
+		</div>
+		<div class="position-city">定位城市：<span>bj</span></div>
+		<div class="hot-city">
+			<p>热门城市</p>
+			<div class="hot-list">
+				<!-- <a>上海</a> -->
+			</div>
+		</div>
+		<div class="find">
+			<!-- <span>A</span> -->			
+		</div>
+		<div class="all-city">
+			<!-- <div class="rank">
+							<p>A</p>
+							<div class="all-list">
+								<a>上海</a>
+							</div>
+						</div> -->			
+		</div>
+	</div>
+	<div id="rlist" class="section">
+		<div class="rlist_header">
+			<a href="#search"><span id="areaName">上海南二中</span></a>
+		</div>
+		<div class="banner">
+			<div class="goods_items">
+				<div class="one_item">
+					<!-- <a href="javascript:;">
+						<div class="item_img">
+							<img src="img/1.jpg" alt="">
+						</div>
+						<span>美食</span>
+					</a> -->
+					
+				</div>
+				<div class="one_item two_item"></div>
+			</div>
+			<div class="point">
+				<span class="active"></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="list_content">
+			<h3>附近商家</h3>
+			<div class="list_wrap">
+				<!-- <div class="list_item">
+					<div class="left_img">
+						<img src="img/1.jpg" alt="">
+					</div>
+					<div class="right_detail">
+						<div class="item_name">
+							肯德基宅急送
+						</div>
+						<div class="item_salenum">
+							<span class="rating">4.8</span> 月销<span class="recent_order_num">824</span>单
+						</div>
+						<div class="item_tip">
+							￥<span class="start_price">0</span>起送/配送费￥<span class="delivery">9</span>
+							<span class="fr">
+								<span class="distance">555</span><span class="unit">m/</span><em><span class="lead_time">38</span>分钟</em>
+							</span>
+						</div>
+					</div>-->
+				</div> 				
+			</div>
+		</div>
+	</div>
+	<div id="detail" class="section">
+		<div class="det_head">
+			<!--<div class="hea_wrap">
+				 <div class="hea_left">
+					<img src="https://fuss10.elemecdn.com/2/53/ea8c925fff26216607fdb04513230png.png?imageMogr/quality/80/format/webp/">
+				</div>
+				<div class="hea_right">
+					<h2>河马</h2>
+					<div class="hea_tip">
+						<span>我们我们</span><em>/</em><span>按时打卡</span><em>/</em><span>地方发给</span>
+					</div>
+					<div class="hea_active">
+						<em>新</em>
+						<span>大地飞歌更换合格</span>
+					</div>
+				</div> 
+			</div>-->			
+		</div>
+		<div class="det_nav">
+			<div class="nav_goods nav_active">商品</div>
+			<div class="nav_shops">商家</div>
+		</div>
+		<div class="det_menu">
+			<div class="men_left">
+				<!--<ul class="lef_con">
+					 <li class="left_active">热销榜</li>
+					<li>热销榜</li>
+				</ul> -->
+			</div>
+			<div class="men_right">
+				<!--<div class="rig_wrap">					
+					 <div class="men_goods">
+						<h2>热销榜</h2>
+						<div class="goo_con">
+							<div class="goo_left">
+								<img src="https://fuss10.elemecdn.com/2/53/ea8c925fff26216607fdb04513230png.png?imageMogr/quality/80/format/webp/">
+							</div>
+							<div class="goo_right">
+								<div class="goo_name">积极地方郭德纲</div>
+								<div class="goo_tip">j坚实的疯狂世界东方路口的说法</div>
+								<div class="goo_well">
+									<span class="goo_salenum">月销234份</span>
+									<span class="goo_eval"> 好评率100%</span>
+								</div>							
+								<div class="goo_imp">
+									<div class="goo_price">￥<span>120</span></div>
+									<div class="goo_num">
+										<a href="javascript:;">-</a>
+										<span>1</span>
+										<a href="javascript:;">+</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>	-->			
+			</div>
+		</div>
+		<div class="det_footer">
+			<div class="det_wrap">
+				<div class="det_left">
+					<div class="det_car">
+						<span>2</span>
+					</div>
+					<div class="det_price">
+						<p>￥<span>0</span></p>
+						<p class="arrivePrice">配送费￥5</p>
+					</div>
+				</div>
+				<div class="det_rigth">
+					<a href="###">去结算</a>
+				</div>
+				<div class="cartbody">
+					<div class="carthead">
+						<div class="car_tip">购物车</div>
+						<div class="car_clear">
+							<img src="img/rubbish.jpg" >
+							<span class="clear_all">清空</span>
+						</div>
+					</div>
+					<div class="carcntent">
+						<ul class="carInfo">
+							<!-- <li>
+								<div class="car_name">我是一只鸡</div>
+								<div class="car_price">￥<span>12</span></div>
+								<div class="goo_num car_pm">
+									<a href="javascript:;">-</a>
+									<span>1</span>
+									<a href="javascript:;">+</a>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/module/iscroll.js"></script>
+	<script src="js/module/searchObj.js"></script>
+	<script src="js/module/citylistObj.js"></script>
+	<script src="js/module/rlistObj.js"></script>
+	<script src="js/module/detailObj.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
