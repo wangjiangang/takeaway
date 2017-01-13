@@ -173,7 +173,7 @@ detailObj = $.extend(detailObj,{
 		var that = this;
 		$('.men_left').on('click','li',function(){
 			$(this).addClass('left_active').siblings().removeClass('left_active');
-			var selector = '[data-title='+ this.innerHTML +']';
+			var selector = '[data-title="'+ this.innerHTML +'"]';
 			var curelem = $(selector).get(0);
 			rightScroll.scrollToElement(curelem,400);
 		});
@@ -196,7 +196,7 @@ detailObj = $.extend(detailObj,{
 
 
 
-			var $name = $(this).closest('.goo_con').find('.goo_name').text();
+			/*var $name = $(this).closest('.goo_con').find('.goo_name').text();
 			var $ID = $(this).closest('.goo_con').find('.goo_name').get(0).dataset.itemid;
 			console.log($ID)
 			var total = curOnePrice*curNum;
@@ -214,7 +214,7 @@ detailObj = $.extend(detailObj,{
 								'<a href="javascript:;">+</a>'+
 							'</div>'+
 						'</li>');
-			$('.carInfo').append($li);
+			$('.carInfo').append($li);*/
 		})
 		$('.men_right').on('click','.minus',function(){
 			var curShowNum = $(this).closest('.goo_num').find('.show_num');

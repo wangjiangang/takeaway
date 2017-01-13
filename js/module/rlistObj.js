@@ -166,8 +166,8 @@ rlistObj = $.extend(rlistObj,{
 								'<span>'+ res[i].title +'</span>'+
 							'</a>'
 				}
-				$('.one_item').html(html);
-				for(var i = 8;i < 16;i ++){					
+				$('.item_one').html(html);
+				for(var i = 8;i < res.length;i ++){					
 					html2 += '<a href="javascript:;">'+
 								'<div class="item_img">'+
 									'<img src="http://fuss10.elemecdn.com/'+ res[i].image_url +'" alt="">'+
@@ -175,7 +175,7 @@ rlistObj = $.extend(rlistObj,{
 								'<span>'+ res[i].title +'</span>'+
 							'</a>'
 				}
-				$('.two_item').html(html2);
+				$('.item_two').html(html2);
 			},
 			error:function(){
 				console.log('后台数(ren)据(yuan)错(de)误(guo)');
@@ -186,7 +186,7 @@ rlistObj = $.extend(rlistObj,{
 		//按需加载
 		window.addEventListener('scroll',this.scrollInfo);
 		//轮播图	
-		var startX = 0;	
+		/*var startX = 0;	
 		var moveX = 0;
 		var startLeft = 0;
 		var ele = document.getElementsByClassName('banner')[0];
@@ -218,12 +218,6 @@ rlistObj = $.extend(rlistObj,{
 			}else{				
 				offsetLeft = -(startLeft + showWidth);
 			}
-			/*if(offsetLeft >= 0){
-				offsetLeft = -itemNum*showWidth
-				//console.log(offsetLeft)
-			}else if(offsetLeft < -itemNum*showWidth){
-				offsetLeft = 0
-			}*/
 			$('.goods_items').css({'left':offsetLeft,'transition':'left,.5s'});
 			var now = Math.abs(parseInt(offsetLeft/showWidth));
 			//console.log(now)
@@ -231,7 +225,22 @@ rlistObj = $.extend(rlistObj,{
 			setTimeout(function(){
 				$('.goods_items').css('transition','left,0s');
 			},500)
-		},false)
+		},false)*/
+		var bullets = $(".point span");
+		Swipe(document.getElementById('mySwipe'), {
+	          auto: 0,
+	          continuous: true,
+	          disableScroll:false,
+	          callback: function(pos) {
+	            console.log('滑动结束之后所执行回调函数');
+	              var i = bullets.length;
+	              while (i--) {
+	                  bullets[i].className = ' ';
+	              }
+	              //为当前小数点实现高亮的处理
+	              bullets[pos].className = 'active';
+	          }
+	      });
 		//跳转页面
 		$('.list_wrap').on('click','.list_item',function(event){
 			window.location.href='#detail-' + this.dataset.id + '-' + this.dataset.lat + '-' + this.dataset.lng;

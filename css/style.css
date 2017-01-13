@@ -95,6 +95,7 @@ button{
 /* ------------------------------------城市列表页-------------------------------------- */
 #citylist{
 	background: #F3F1F1;
+	color: #555;
 }
 .city_header{
 	width: 100%;
@@ -193,6 +194,7 @@ button{
 	text-align: center;
 	font-size: 18px;
 	overflow: hidden;
+	color: #555;
 } 
 /* ------------------------------------商品列表页-------------------------------------- */
 #rlist{
@@ -212,50 +214,61 @@ button{
 	overflow: hidden;
 	color: #fff;
 }
-.goods_items{
-	width: 32rem;	
-	overflow: hidden;
-	position:absolute;
+.swipe{
+    overflow: hidden;
+    visibility: hidden;
+    position:relative;
 }
-.one_item{
-	width: 16rem;
-	height: 7.730667rem;
-	display: flex;
-	flex-wrap: wrap;
-	float: left;
+.swipe-wrap{
+    overflow-x:hidden;
+    position:relative;
 }
-.two_item{
-	float: left;
-}
-.one_item a{
-	display: block;
-	margin-top: .293333rem;
-    width: 25%;
-    float: left;
-    height: 2.794667rem;
-}
-.one_item a .item_img{
-	width: 1.92rem;
-    height: 1.92rem;
-    margin-left: 26%;
-}
-.one_item a .item_img img{
-	width: 100%;
-	height: 100%;
-}
-.one_item a span{
-	display: block;
-    margin-top: .6rem;
-    color: #666;
-    font-size: 14px;
+.swipe-wrap > div {
+    float: left;width: 100%;
+    position:relative;
 }
 .banner{	
 	height: 7.730667rem;
 	background: #fff;
 	margin-bottom: 0.426667rem;
-	overflow: hidden;
+	/* overflow: hidden; */
 	position: relative;
 }
+.item{
+	height: 7.730667rem; 
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	 float: left; 
+}
+.item a{
+	display: flex;
+    width: 25%;
+    height: 2.794667rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.item_img{
+	width: 1.92rem;
+    height: 1.92rem;
+    overflow: hidden;
+}
+.item_img img{
+	width: 100%;
+	height: 100%;
+}
+.item span{
+	display: block;
+    margin-top: .6rem;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+
 .point{
 	position: absolute;
 	bottom: 0.2rem;
@@ -643,7 +656,9 @@ button{
 	position: absolute;
 	top: -200px;
 	left: 0;
-}
+	display: none;
+	/* 隐藏了东西*/
+} 
 .carthead{
 	width: 100%;
 	height: 1.493333rem;
